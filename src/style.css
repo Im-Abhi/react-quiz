@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: oklch(0.707 0.165 254.624);
+}
+
+body {
+    background-color: var(--color-primary);
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(32, 121, 215);
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0px;
+    width: 0;
+    height: 8px;
+    left: 0;
+    border-radius: 10px 0 0 0;
+}
+
+.progress-bar.active1 {
+    animation: progress 30s linear forwards infinite;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        background: green;
+    }
+    25% {
+        width: 25%;
+        background: yellowgreen;
+    }
+    50% {
+        width: 50%;
+        background: yellow;
+    }
+    75% {
+        width: 75%;
+        background: orange;
+    }
+    100% {
+        width: 100%;
+        background: orangered;
+    }
+}
+
+.option {
+    padding: 8px;
+    border-bottom: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 20px;
+    margin-block: 8px;
+}
+
+.option:hover {
+    background-color: rgb(151, 198, 248);
+}
+
+.active {
+    background-color: rgb(32, 121, 215);
+}
+
+/* table styles */
+th {
+    border: 1px solid white;
+}
+
+table {
+    border: 1px solid gray;
+}
+
+tr,
+td {
+    border: 1px dashed gray;
+}
+
+th {
+    font-weight: normal;
+    padding: 8px;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
