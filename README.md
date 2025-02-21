@@ -31,7 +31,10 @@ Currently, two official plugins are available:
 6. **Creating Production Build**
    ```bash
    npm run build
-7. **Preview the production build**
+7. **Running the production build**
+   ```bash
+   npm run preview
+8. **Preview**
    ```bash
    http://localhost:4173
 
